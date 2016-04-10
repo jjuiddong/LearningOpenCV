@@ -37,8 +37,8 @@ void main()
 		{
 			for (int x = 0; x < dst1.cols; ++x)
 			{
-				const int xx = (dst1.at<unsigned char>(y, x) > 0);
-				const int yy = (dst2.at<unsigned char>(y, x) > 0);
+				const int xx = dst1.at<unsigned char>(y, x);
+				const int yy = dst2.at<unsigned char>(y, x);
 				if ((xx > 0) && (yy > 0))
 				{
 					angle += atan((float)yy / (float)xx);
